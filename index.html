@@ -19,7 +19,8 @@
         .blog-article {}
       </style>
       <script async src="https://cdn.ampproject.org/v0.js"></script>
-      <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+      <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+      <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
       <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     </head>
     <body>
@@ -32,12 +33,16 @@
         </div>
       </nav>
       <section class="blog-section">
-        <article class="blog-article">
-          <a href="/"></a>
-        </article>
-        <article class="blog-article">
-          <a href="/"></a>
-        </article>
+        <amp-list width="auto" height="100" layout="fixed-height" src="https://ampbyexample.com/json/examples.json">
+          <template type="amp-mustache" id="amp-template-id">
+            <article class="blog-article">
+              <a href="{{url}}">
+                <h2>{{title}}</h2>
+                <p></p>
+              </a>
+            </article>
+          </template>
+        </amp-list>
       </section>
     </body>
   </html>
