@@ -7,14 +7,13 @@
       <title>Lois Atwood, front-end dev</title>
       <link rel="shortcut icon" href="/favicon.ico">
       <link rel="canonical" href="https://loisatwood.uk">
+      <link href="https://fonts.googleapis.com/css?family=Acme|Aldrich|Cabin:400,700" rel="stylesheet">
       <link rel="alternate" type="application/rss+xml" title="Lois Atwood blog RSS feed" href="/feed.rss">
       <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
       <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
       <style amp-custom>
-        .site-nav {}
-        .site-nav-left, site-nav-right {}
-        .site-nav-left {} 
-        .site-nav-right {}
+        .site-nav { position: fixed; top: 0; right: 0; padding: 1em; }
+        .site-nav a { padding: .5em 0; display: block; font-family: Aldrich; font-size: 12; color: #111; }
         .blog-section {}
         .blog-article {}
       </style>
@@ -25,12 +24,8 @@
     </head>
     <body>
       <nav class="site-nav">
-        <div class="site-nav-left">
-          <a href="/about">about</a>
-        </div>
-        <div class="site-nav-right">
-          <a href="/talk">talk</a>
-        </div>
+        <a href="/about">about</a>
+        <a href="/talk">talk</a>
       </nav>
       <section class="blog-section">
         <amp-list width="auto" height="auto" layout="fill" src="/posts.json">
