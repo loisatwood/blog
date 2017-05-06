@@ -33,12 +33,12 @@
         </div>
       </nav>
       <section class="blog-section">
-        <amp-list width="auto" height="100" layout="fixed-height" src="https://ampbyexample.com/json/examples.json">
+        <amp-list width="auto" height="100" layout="fixed-height" src="/blog.json">
           <template type="amp-mustache" id="amp-template-id">
             <article class="blog-article">
               <a href="{{url}}">
                 <h2>{{title}}</h2>
-                <p></p>
+                <p>{{excerpt}}</p>
               </a>
             </article>
           </template>
