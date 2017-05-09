@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" amp><head>
+<html amp><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>Lois Atwood, front-end dev</title>
@@ -30,14 +30,7 @@ html, body { background: #3e4459; color: #fff; font-family: "Anonymous Pro"; }
 </nav>
 <section class="blog-section">
 <amp-list id="blogArticles" layout="responsive" width="1" height="1" src="https://loisatwood.uk/posts.json">
-<template type="amp-mustache" id="amp-template-id">
-<article class="blog-article">
-<a href="{{url}}">
-<h2>{{title}}</h2>
-<p>{{excerpt}}</p>
-</a>
-</article>
-</template>
+<template type="amp-mustache" id="amp-template-id"><article class="blog-article"><a href="{{url}}"><h2>{{title}}</h2><p>{{excerpt}}</p></a></article></template>
 </amp-list>
 </section>
 </body></html>
