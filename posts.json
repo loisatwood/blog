@@ -2,31 +2,25 @@
  "items": [
    {
      "title": "React without JSX and friends",
-     "url": "/",
+     "url": "/react-without-jsx",
      "excerpt": "",
      "content": ""
    },
    {
-     "title": "",
-     "url": "/",
+     "title": "Troubleshooting AMP layouts",
+     "url": "/troubleshooting-amp-layouts",
      "excerpt": "",
      "content": ""
    },
    {
-     "title": "",
-     "url": "/",
+     "title": "Why static sites are not old hat",
+     "url": "/why-static-sites-are-not-old-hat",
      "excerpt": "",
      "content": ""
    },
    {
-     "title": "",
-     "url": "/",
-     "excerpt": "",
-     "content": ""
-   },
-   {
-     "title": "",
-     "url": "/",
+     "title": "What does good jQuery style look like?",
+     "url": "/what-does-good-jquery-style-look-like",
      "excerpt": "",
      "content": ""
    }
