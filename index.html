@@ -18,6 +18,7 @@ html, body { background-color: #444; background: url("https://i.imgur.com/A89Q3y
 .site-title { position: fixed; top: 0; left: 0; right: 0; max-width: 15em; margin: 0 auto; font-family: "Permanent Marker"; font-size: 4em; padding: .25em; }
 #blogArticles { height: 100vh; height: calc(100vh - 6.5em); }
 .i-amphtml-layout-size-defined .i-amphtml-fill-content { overflow: auto; }
+.amp-close-img { top: 1em; right: 1em; cursor: pointer; }
 </style>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
@@ -26,8 +27,13 @@ html, body { background-color: #444; background: url("https://i.imgur.com/A89Q3y
 <h1 class="site-title">Lois Atwood</h1>
 <nav class="site-nav">
 <a href="/about">about</a>
-<a href="/talk">talk</a>
+<button on="tap:sidebar.toggle">about</button>
 </nav>
+<amp-sidebar id="sidebar" layout="nodisplay" side="right">
+<amp-img class="amp-close-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAlklEQVR4Ae3USwqDQBAA0ercK3OYfC7lJ0dtA+JmQAp7EbKZcinzRIZu+kajRmDdaFzoTTIRwnxInuA1ko2tp3pmf580tGBm25+ZOGf0Q045Y9RyHFiIOuOUM0qtx8GVKDJC1Ri5ozojlDN16G+/1l/4JFSBCRucAqODU2B8cCqMUAXGBqe42M6p5I7H69Kqffxi+Y9GX50Hllcu+oGKAAAAAElFTkSuQmCC" width="20" height="20" alt="close sidebar" on="tap:sidebar.close" role="button" tabindex="0"></amp-img>
+<p>My name is Lois. I'm an aspiring web designer/developer currently working on open source projects to learn more about frontend.</p>
+<p>This is a where I keep my </p>
+</amp-sidebar>
 <section class="blog-section">
 <amp-list id="blogArticles" layout="responsive" width="1" height="1" src="https://loisatwood.uk/posts.json">
 <template type="amp-mustache" id="amp-template-id"><article class="blog-article"><a href="{{url}}"><h2>{{title}}</h2><p>{{excerpt}}</p></a></article></template>
