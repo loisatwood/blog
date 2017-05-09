@@ -9,8 +9,8 @@
 <style amp-custom>
 html, body { background-color: #444; background: url("https://i.imgur.com/A89Q3yh.jpg") center/cover no-repeat; color: #fff; font-family: "Anonymous Pro"; }
 .site-nav { position: fixed; top: 0; right: 0; padding: 1em; }
-.site-nav a { padding: .5em 0; display: block; text-transform: uppercase; text-decoration: none; font-family: "Permanent Marker"; font-size: 1.1em; color: #fff; }
-.site-nav a:hover { text-decoration: underline; }
+.open-nav { padding: .5em 0; display: block; text-transform: uppercase; text-decoration: none; font-family: "Permanent Marker"; font-size: 1.1em; color: #fff; }
+.open-nav:hover { text-decoration: underline; }
 .blog-section { padding-top: 6.5em; margin: 0 auto; max-width: 62em; }
 .blog-article { padding: 1em; }
 .blog-article a { display: inline-block; padding: 1em; color: #444; border-radius: 5px; text-decoration: none; background: #fff; box-shadow: 0 5px 10px -5px #333; }
@@ -27,8 +27,7 @@ html, body { background-color: #444; background: url("https://i.imgur.com/A89Q3y
 </head><body>
 <h1 class="site-title">Lois Atwood</h1>
 <nav class="site-nav">
-<a href="/about">about</a>
-<button on="tap:sidebar.toggle">about</button>
+<button on="tap:sidebar.toggle" class="open-nav">about</button>
 </nav>
 <amp-sidebar id="sidebar" layout="nodisplay" side="right">
 <amp-img class="amp-close-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAlklEQVR4Ae3USwqDQBAA0ercK3OYfC7lJ0dtA+JmQAp7EbKZcinzRIZu+kajRmDdaFzoTTIRwnxInuA1ko2tp3pmf580tGBm25+ZOGf0Q045Y9RyHFiIOuOUM0qtx8GVKDJC1Ri5ozojlDN16G+/1l/4JFSBCRucAqODU2B8cCqMUAXGBqe42M6p5I7H69Kqffxi+Y9GX50Hllcu+oGKAAAAAElFTkSuQmCC" width="20" height="20" alt="close sidebar" on="tap:sidebar.close" role="button" tabindex="0"></amp-img>
