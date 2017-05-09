@@ -15,10 +15,11 @@
 html, body { background: #3e4459; color: #fff; font-family: Cabin; }
 .site-nav { position: fixed; top: 0; right: 0; padding: 1em; }
 .site-nav a { padding: .5em 0; display: block; text-transform: uppercase; text-decoration: none; font-size: 1em; color: #fff; }
-.blog-section { position: absolute; top: 5em; left: 0; bottom: 0; right: 0; width: 100%; height: 100vh; height: calc(100vh - 5em); }
+.blog-section { }
 .blog-article { padding: 1em; }
 .blog-article a { display: block; padding: 1em; color: #3e4459; border-radius: 6px; text-decoration: none; background: #fff; }
 .site-title { font-size: 4em; padding: .25em; margin: 0; }
+#postlist { height: 100vh; height: calc(100vh - 5em); max-height: 100vh; max-height: calc(100vh - 5em); }
 </style>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
@@ -31,7 +32,7 @@ html, body { background: #3e4459; color: #fff; font-family: Cabin; }
 <a href="/talk">talk</a>
 </nav>
 <section class="blog-section">
-<amp-list layout="responsive" width="1" height="1" src="https://loisatwood.uk/posts.json">
+<amp-list id="postlist" layout="responsive" width="1" height="1" src="https://loisatwood.uk/posts.json">
 <template type="amp-mustache" id="amp-template-id">
 <article class="blog-article">
 <a href="{{url}}">
