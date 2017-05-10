@@ -1,25 +1,25 @@
 {
  "items": [
    {
-     "title": "React without JSX and friends",
+     "title": "react without JSX and friends",
      "url": "/react-without-jsx",
      "excerpt": "",
      "content": ""
    },
    {
-     "title": "Troubleshooting AMP layouts",
+     "title": "troubleshooting AMP layouts",
      "url": "/troubleshooting-amp-layouts",
      "excerpt": "",
      "content": ""
    },
    {
-     "title": "Why static sites are not old hat",
+     "title": "why static sites are /not/ old hat",
      "url": "/why-static-sites-are-not-old-hat",
      "excerpt": "",
      "content": ""
    },
    {
-     "title": "What does good jQuery style look like?",
+     "title": "what does /good/ jQuery style look like?",
      "url": "/what-does-good-jquery-style-look-like",
      "excerpt": "",
      "content": ""
