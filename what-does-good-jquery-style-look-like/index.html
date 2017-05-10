@@ -19,6 +19,7 @@ body:after { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
 .blog-article > a:hover { text-decoration: underline; }
 .blog-article > .full { padding: 5%; color: #444; border-radius: 5px; text-decoration: none; background: #fff; }
 .site-title { position: fixed; top: 0; left: 0; right: 0; max-width: 15em; margin: 0 auto; font-family: "Permanent Marker"; font-size: 4em; padding: .25em; }
+.site-title > a { text-decoration: none; display: block; }
 #blogArticles { max-height: 100vh; max-height: calc(100vh - 6.5em); }
 .i-amphtml-layout-size-defined .i-amphtml-fill-content { -webkit-overflow-scrolling: touch; overflow: auto; }
 amp-sidebar { width: 15em; padding: 1em; color: #444; line-height: 1.2; }
@@ -32,7 +33,11 @@ article pre { overflow-y: hidden; overflow-x: auto; padding: 1em; background: #4
 <script async src="https://cdn.ampproject.org/v0.js"></script><script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script><script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 </head>
 <body class="post">
-<h1 class="site-title">L<span>ois</span> A<strong>twood</strong></h1>
+<h1 class="site-title">
+    <a href="/">
+        L<span>ois</span> A<strong>twood</strong>
+    </a>
+</h1>
 <aside class="site-nav">
     <button on="tap:sidebar.toggle" class="open-nav">about</button>
 </aside>
