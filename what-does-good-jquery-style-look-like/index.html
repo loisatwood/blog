@@ -1,1 +1,94 @@
-
+<!DOCTYPE html>
+<html amp>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<title>What is good jquery style? ~ Lois Atwood, front-end dev</title>
+<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Permanent+Marker" rel="stylesheet">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+html, body { color: #fff; font-family: "Anonymous Pro"; }
+body:after { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh; background: url(https://i.imgur.com/A89Q3yh.jpg) center/cover no-repeat; z-index: -1; }
+.site-nav { position: fixed; top: 0; left:0; right: 0; max-width: 62em; margin: 0 auto; text-align: right; padding: 1em; }
+.open-nav { padding: .5em 0; cursor: pointer; touch-action: manipulation; border: none; background-color: transparent; background: 0 0; -webkit-appearance: none; appearance: none; display: inline-block; text-transform: uppercase; text-decoration: none; font-family: "Permanent Marker"; font-size: 1.1em; color: #fff; }
+.open-nav:hover { text-decoration: underline; }
+.blog-section { padding-top: 6.5em; margin: 0 auto; max-width: 62em; }
+.blog-article { padding: 1em; }
+.blog-article > a { display: inline-block; padding: 1em; color: #444; border-radius: 5px; text-decoration: none; background: #fff; }
+.blog-article > a:hover { text-decoration: underline; }
+.blog-article > .full { padding: 1em; color: #444; border-radius: 5px; text-decoration: none; background: #fff; }
+.site-title { position: fixed; top: 0; left: 0; right: 0; max-width: 15em; margin: 0 auto; font-family: "Permanent Marker"; font-size: 4em; padding: .25em; }
+#blogArticles { max-height: 100vh; max-height: calc(100vh - 6.5em); }
+.i-amphtml-layout-size-defined .i-amphtml-fill-content { -webkit-overflow-scrolling: touch; overflow: auto; }
+amp-sidebar { width: 15em; padding: 1em; color: #444; line-height: 1.2; }
+.amp-close-img { top: 1em; left: 14em; cursor: pointer; }
+.profile-img { -webkit-border-radius: 50%; border-radius: 50%; margin: 0 auto; max-width: 8em; border: 2px solid transparent; box-shadow: 3px 3px #444, -3px -3px #444, 3px -3px #444, -3px 3px #444; }
+@media screen and (max-width: 500px) { h1 span { display: none; } }
+@media screen and (max-width: 400px) { h1 strong { display: none; } }
+</style>
+<script async src="https://cdn.ampproject.org/v0.js"></script><script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script><script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+</head>
+<body>
+<h1 class="site-title">L<span>ois</span> A<strong>twood</strong></h1>
+<aside class="site-nav">
+    <button on="tap:sidebar.toggle" class="open-nav">about</button>
+</aside>
+<amp-sidebar id="sidebar" layout="nodisplay" side="right">
+    <amp-img class="amp-close-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAlklEQVR4Ae3USwqDQBAA0ercK3OYfC7lJ0dtA+JmQAp7EbKZcinzRIZu+kajRmDdaFzoTTIRwnxInuA1ko2tp3pmf580tGBm25+ZOGf0Q045Y9RyHFiIOuOUM0qtx8GVKDJC1Ri5ozojlDN16G+/1l/4JFSBCRucAqODU2B8cCqMUAXGBqe42M6p5I7H69Kqffxi+Y9GX50Hllcu+oGKAAAAAElFTkSuQmCC" width="20" height="20" alt="close sidebar" on="tap:sidebar.close" role="button" tabindex="0"></amp-img>
+    <amp-img class="profile-img" layout="responsive" width="1" height="1" src="https://i.imgur.com/5fTrd3D.png"></amp-img>
+    <p>hi. i'm an aspiring web designer currently working on open source projects to learn more about coding.</p>
+    <p>this is where i keep my some of my more organized thoughts.</p>
+</amp-sidebar>
+<section class="blog-section">
+    <article class="blog-article">
+        <div class="full">
+            <h2>what is good jquery style?</h2>
+            <p>being still new to JS, i'm a heavy jquery user because of the simplicity and clarity of the little monadic meta-language that it provides.</p>
+            <p>it's extremely easy to get going with method chaining and the implicit 'select all' way in which jquery's selector function works.</p>
+            <p>more recently i started working with someone a bit more old school and i was surprised to find their code easier to understand than my own, despite the fact that it was written in plain ol' JS.</p>
+            <p>there was a clear function for everything and efficient reuse and forward-planning in the actual function definitions that made it read almost as clearly as plain english.</p>
+            <p>while i don't fancy trying to replicate that just yet, because most of the code i was reading, though clear, was based on browser API's and hacks that i wouldn't know the first thing about yet. but it did get me thinking: is my own jquery code as readable as it could be?</p>
+            <p>i opened a random snippet of code i'd recently made, just the makings of a hamburger menu:</p>
+            <pre>
+$(document).ready(function(){
+    $(document).find("button#burger").on("click",function(){
+        if ($(this).next().css("display") == "none"){
+            $(this).next().show();
+        } else {
+            $(this).next().hide();
+        }
+    });
+});
+            </pre>
+            <p>i don't think it's impossible to see where i was going there, but in hindsight it does look incredibly shocking compared to what i later devised after a little reflection:</p>
+            <pre>
+$(document).ready(function(){
+    $("#burger").click(function({
+        $("#sidebar").toggle();
+    });
+});
+            </pre>
+            <p>quite a drastically simpler and easier to understand solution. but that's not style, that's simply how to write non-shitty code. the lesson to be learned from that experience was this: if you want to learn jquery, learn the API and put the pieces together yourself, don't just grab something from stackoverflow and repurpose it.</p>
+            <p>but good style, which is something i think i saw in my new colleague, is quite different. it's rigorous to say the least. when i reviewed the commit history, i noticed that the entire thing had been refactored entirely several times. so, lesson 1: <strong>don't be afraid to start over</strong>. something i find very difficult is to step back and just honestly say to myself that my code is crap and it all needs to go. my colleague says his most common action besides writing the word 'function' is to select a large portion of his work and to delete it.</p>
+            <p>what's the philosophy behind that? if you're doing it right, you'll stick to your guns on the second rewrite. if there's a better way, it'll occur to you while you're trying to remember how you did it the first time. i guess? maybe it's easier with an analogy to chess: if you see the perfect move, look again.</p>
+            <p>of course, my colleague hates jquery with a passion, citing performance slowness and in general a big fat library where one is no longer required. i can kind of agree with that, internet explorer isn't as bad as it used to be and theres a lot of standard apis now, but i wouldn't fancy reinventing bits of jquery every time i had a project to do.</p>
+            <p>one of the things that makes his code very easy to understand is the naming. naming is half the battle in the dev world, and all too often i don't really bother picking a useful name for a function. but when you work with others, it becomes mandatory (if you're a good hearted person) to write a good, descriptive name. if you follow the airbnb style guide's advice i think you're fine <a href="https://github.com/airbnb/javascript#naming-conventions">(link)</a>.</p>
+            <p>i think the most important thing for the jquery user specifically is regarding selectors. all too often i find myself doing this:</p>
+            <pre>
+$(".thing").click(function(){$(".thing").toggle();
+    $(".thing").find("span").text("something");
+});
+            </pre>
+            <p>where a more experienced developer would simply do this:</p>
+            <pre>
+var $thing = $(".thing");
+            </pre>
+            <p>which stores the selector and is a lot speedier in terms of performance. this might not be a massive boost, but the other advantage is of course that it's easier to follow when you store references.</p>
+            <p>one thing i won't agree on, and this is an age old debate, is indentation. my new friend and google both recommend two spaces, but i'm a fan of 4-space tab and nothing is likely to change that. unfortunately i must abide by the convention but the great thing about visual studio or any good text editor is that it makes a bulk change at the end of your work easy to do.</p>
+            <p>ultimately, much of what i identify as good style comes down to forward-planning and good structure, good knowledge of how to architecture your app code. for jquery, it's so easy to make a mess because it's so easy to make things behave how you want them to behave, but you need to think ahead. trouble is, the deeper down the rabbit hole you go, the closer to using a JS framework you end up.</p>
+        </div>
+    </article>
+</section>
+</body>
+</html>
