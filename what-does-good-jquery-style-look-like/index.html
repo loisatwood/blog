@@ -81,10 +81,11 @@ $(document).ready(function(){
             <p>one of the things that makes his code very easy to understand is the naming. naming is half the battle in the dev world, and all too often i don't really bother picking a useful name for a function. but when you work with others, it becomes mandatory (if you're a good hearted person) to write a good, descriptive name. if you follow the airbnb style guide's advice i think you're fine <a href="https://github.com/airbnb/javascript#naming-conventions">(link)</a>.</p>
             <p>i think the most important thing for the jquery user specifically is regarding selectors. all too often i find myself doing this:</p>
             <pre>
-$(".thing").click(function(){$(".thing").toggle();
+$(".thing").click(function(){
+    $(".thing").toggle();
     $(".thing").find("span").text("something");
 });</pre>
-            <p>where a more experienced developer would simply do this:</p>
+            <p>where a more experienced developer would simply replace the selectors with a reference like this:</p>
             <pre>
 var $thing = $(".thing");</pre>
             <p>which stores the selector and is a lot speedier in terms of performance. this might not be a massive boost, but the other advantage is of course that it's easier to follow when you store references.</p>
