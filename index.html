@@ -17,10 +17,10 @@ html, body { background-color: #444; background: url("https://i.imgur.com/A89Q3y
 .blog-article a:hover { text-decoration: underline; }
 .site-title { position: fixed; top: 0; left: 0; right: 0; max-width: 15em; margin: 0 auto; font-family: "Permanent Marker"; font-size: 4em; padding: .25em; }
 #blogArticles { height: 100vh; height: calc(100vh - 6.5em); }
-.i-amphtml-layout-size-defined .i-amphtml-fill-content { overflow: auto; }
+.i-amphtml-layout-size-defined .i-amphtml-fill-content { -webkit-overflow-scrolling: touch; overflow: auto; }
 amp-sidebar { width: 15em; padding: 1em; color: #444; line-height: 1.2; }
 .amp-close-img { top: 1em; left: 14em; cursor: pointer; }
-.profile-img { -webkit-border-radius: 50%; border-radius: 50%; margin: 0 auto; max-width: 120px; border: 2px solid transparent; box-shadow: 3px 3px #444, -3px -3px #444, 3px -3px #444, -3px 3px #444; }
+.profile-img { -webkit-border-radius: 50%; border-radius: 50%; margin: 0 auto; max-width: 8em; border: 2px solid transparent; box-shadow: 3px 3px #444, -3px -3px #444, 3px -3px #444, -3px 3px #444; }
 @media screen and (max-width: 500px) { h1 span { display: none; } }
 @media screen and (max-width: 400px) { h1 strong {display: none; } }
 </style>
@@ -36,8 +36,8 @@ amp-sidebar { width: 15em; padding: 1em; color: #444; line-height: 1.2; }
 <amp-sidebar id="sidebar" layout="nodisplay" side="right">
 <amp-img class="amp-close-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAlklEQVR4Ae3USwqDQBAA0ercK3OYfC7lJ0dtA+JmQAp7EbKZcinzRIZu+kajRmDdaFzoTTIRwnxInuA1ko2tp3pmf580tGBm25+ZOGf0Q045Y9RyHFiIOuOUM0qtx8GVKDJC1Ri5ozojlDN16G+/1l/4JFSBCRucAqODU2B8cCqMUAXGBqe42M6p5I7H69Kqffxi+Y9GX50Hllcu+oGKAAAAAElFTkSuQmCC" width="20" height="20" alt="close sidebar" on="tap:sidebar.close" role="button" tabindex="0"></amp-img>
 <amp-img class="profile-img" layout="responsive" width="1" height="1" src="http://i.imgur.com/5fTrd3D.png"></amp-img>
-<p>Hi. I'm an aspiring web designer currently working on open source projects to learn more about coding.</p>
-<p>This is where I keep my some of my more organized thoughts.</p>
+<p>hi. i'm an aspiring web designer currently working on open source projects to learn more about coding.</p>
+<p>this is where i keep my some of my more organized thoughts.</p>
 </amp-sidebar>
 <section class="blog-section">
 <amp-list id="blogArticles" layout="responsive" width="1" height="1" src="https://loisatwood.uk/posts.json">
