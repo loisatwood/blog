@@ -24,6 +24,7 @@ body:after { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
 amp-sidebar { width: 15em; padding: 1em; color: #444; line-height: 1.2; }
 .amp-close-img { top: 1em; left: 14em; cursor: pointer; }
 .profile-img { -webkit-border-radius: 50%; border-radius: 50%; margin: 0 auto; max-width: 8em; border: 2px solid transparent; box-shadow: 3px 3px #444, -3px -3px #444, 3px -3px #444, -3px 3px #444; }
+article pre { overflow-y: hidden; overflow-x: auto; padding: 1em; background: #444; color: #fff; }
 @media screen and (max-width: 500px) { h1 span { display: none; } }
 @media screen and (max-width: 400px) { h1 strong { display: none; } }
 </style>
@@ -59,16 +60,14 @@ $(document).ready(function(){
             $(this).next().hide();
         }
     });
-});
-            </pre>
+});</pre>
             <p>i don't think it's impossible to see where i was going there, but in hindsight it does look incredibly shocking compared to what i later devised after a little reflection:</p>
             <pre>
 $(document).ready(function(){
     $("#burger").click(function({
         $("#sidebar").toggle();
     });
-});
-            </pre>
+});</pre>
             <p>quite a drastically simpler and easier to understand solution. but that's not style, that's simply how to write non-shitty code. the lesson to be learned from that experience was this: if you want to learn jquery, learn the API and put the pieces together yourself, don't just grab something from stackoverflow and repurpose it.</p>
             <p>but good style, which is something i think i saw in my new colleague, is quite different. it's rigorous to say the least. when i reviewed the commit history, i noticed that the entire thing had been refactored entirely several times. so, lesson 1: <strong>don't be afraid to start over</strong>. something i find very difficult is to step back and just honestly say to myself that my code is crap and it all needs to go. my colleague says his most common action besides writing the word 'function' is to select a large portion of his work and to delete it.</p>
             <p>what's the philosophy behind that? if you're doing it right, you'll stick to your guns on the second rewrite. if there's a better way, it'll occur to you while you're trying to remember how you did it the first time. i guess? maybe it's easier with an analogy to chess: if you see the perfect move, look again.</p>
@@ -78,12 +77,10 @@ $(document).ready(function(){
             <pre>
 $(".thing").click(function(){$(".thing").toggle();
     $(".thing").find("span").text("something");
-});
-            </pre>
+});</pre>
             <p>where a more experienced developer would simply do this:</p>
             <pre>
-var $thing = $(".thing");
-            </pre>
+var $thing = $(".thing");</pre>
             <p>which stores the selector and is a lot speedier in terms of performance. this might not be a massive boost, but the other advantage is of course that it's easier to follow when you store references.</p>
             <p>one thing i won't agree on, and this is an age old debate, is indentation. my new friend and google both recommend two spaces, but i'm a fan of 4-space tab and nothing is likely to change that. unfortunately i must abide by the convention but the great thing about visual studio or any good text editor is that it makes a bulk change at the end of your work easy to do.</p>
             <p>ultimately, much of what i identify as good style comes down to forward-planning and good structure, good knowledge of how to architecture your app code. for jquery, it's so easy to make a mess because it's so easy to make things behave how you want them to behave, but you need to think ahead. trouble is, the deeper down the rabbit hole you go, the closer to using a JS framework you end up.</p>
