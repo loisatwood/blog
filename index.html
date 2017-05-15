@@ -14,14 +14,14 @@ body:after { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
 .open-nav { padding: .5em 0; cursor: pointer; -webkit-pointer-events: auto; pointer-events: auto; touch-action: manipulation; border: none; background-color: transparent; background: 0 0; -webkit-appearance: none; appearance: none; display: inline-block; text-transform: uppercase; text-decoration: none; font-family: "Permanent Marker"; font-size: 1.1em; color: #fff; }
 .open-nav:hover { text-decoration: underline; }
 .blog-section { padding-top: 6.5em; margin: 0 auto; max-width: 62em; }
-.blog-article { padding: 1em; }
+.blog-article { padding: 1em; display: flex; flex-direction: column; flex: 1 1 33%; }
 .blog-article > a { display: inline-block; padding: 1em; color: #444; border-radius: 5px; text-decoration: none; background: #fff; }
 .blog-article > a:hover { text-decoration: underline; }
 .blog-article > .full { position: relative; z-index: 90; padding: 10%; color: #444; border-radius: 5px; text-decoration: none; background: #fff; }
 .site-title { position: fixed; top: 0; left: 0; right: 0; -webkit-pointer-events: none; pointer-events: none; max-width: 15em; margin: 0 auto; font-family: "Permanent Marker"; font-size: 4em; padding: .25em; }
 .site-title > a { -webkit-pointer-events: auto; pointer-events: auto; text-decoration: none; display: block; color: #fff; }
 #blogArticles { max-height: 100vh; max-height: calc(100vh - 6.5em); }
-.i-amphtml-layout-size-defined .i-amphtml-fill-content { -webkit-overflow-scrolling: touch; overflow: auto; }
+.i-amphtml-layout-size-defined .i-amphtml-fill-content { -webkit-overflow-scrolling: touch; overflow: auto; display: flex; flex-flow: row wrap; align-items: stretch; }
 amp-sidebar { width: 15em; padding: 1em; color: #444; line-height: 1.2; }
 .amp-close-img { top: 1em; left: 14em; cursor: pointer; }
 .profile-img { -webkit-border-radius: 50%; border-radius: 50%; margin: 0 auto; max-width: 8em; border: 2px solid transparent; box-shadow: 3px 3px #444, -3px -3px #444, 3px -3px #444, -3px 3px #444; }
