@@ -1,1 +1,57 @@
-
+<!DOCTYPE html>
+<html amp>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<title>react without JSX &amp; friends ~ Lois Atwood, front-end dev</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Permanent+Marker" rel="stylesheet">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+html, body, pre { color: #fff; font-family: "Roboto Mono"; }
+body:after { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh; background: url("https://i.imgur.com/A89Q3yh.jpg") center/cover no-repeat; z-index: -1; }
+.site-nav { position: fixed; top: 0; left:0; right: 0; -webkit-pointer-events: none; pointer-events: none; max-width: 62em; margin: 0 auto; text-align: right; padding: 1em; }
+.open-nav { padding: .5em 0; cursor: pointer; -webkit-pointer-events: auto; pointer-events: auto; touch-action: manipulation; border: none; background-color: transparent; background: 0 0; -webkit-appearance: none; appearance: none; display: inline-block; text-transform: uppercase; text-decoration: none; font-family: "Permanent Marker"; font-size: 1.1em; color: #fff; }
+.open-nav:hover { text-decoration: underline; }
+.blog-section { padding-top: 6.5em; margin: 0 auto; max-width: 62em; }
+.blog-article { padding: 1em; }
+.blog-article > a { display: inline-block; padding: 1em; color: #444; border-radius: 5px; text-decoration: none; background: #fff; }
+.blog-article > a:hover { text-decoration: underline; }
+.blog-article > .full { position: relative; z-index: 90; padding: 10%; color: #444; border-radius: 5px; text-decoration: none; background: #fff; }
+.site-title { position: fixed; top: 0; left: 0; right: 0; -webkit-pointer-events: none; pointer-events: none; max-width: 15em; margin: 0 auto; font-family: "Permanent Marker"; font-size: 4em; padding: .25em; }
+.site-title > a { -webkit-pointer-events: auto; pointer-events: auto; text-decoration: none; display: block; color: #fff; }
+#blogArticles { max-height: 100vh; max-height: calc(100vh - 6.5em); }
+.i-amphtml-layout-size-defined .i-amphtml-fill-content { -webkit-overflow-scrolling: touch; overflow: auto; }
+amp-sidebar { width: 15em; padding: 1em; color: #444; line-height: 1.2; }
+.amp-close-img { top: 1em; left: 14em; cursor: pointer; }
+.profile-img { -webkit-border-radius: 50%; border-radius: 50%; margin: 0 auto; max-width: 8em; border: 2px solid transparent; box-shadow: 3px 3px #444, -3px -3px #444, 3px -3px #444, -3px 3px #444; }
+article pre { overflow-y: hidden; overflow-x: auto; padding: 1em; background: #444; color: #fff; }
+@media screen and (max-width: 500px) { h1 span { display: none; } }
+@media screen and (max-width: 400px) { h1 strong { display: none; } }
+</style>
+<script async src="https://cdn.ampproject.org/v0.js"></script><script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script><script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+</head>
+<body class="post">
+<h1 class="site-title">
+    <a href="/">
+        L<span>ois</span> A<strong>twood</strong>
+    </a>
+</h1>
+<aside class="site-nav">
+    <button on="tap:sidebar.toggle" class="open-nav">about</button>
+</aside>
+<amp-sidebar id="sidebar" layout="nodisplay" side="right">
+    <amp-img class="amp-close-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAlklEQVR4Ae3USwqDQBAA0ercK3OYfC7lJ0dtA+JmQAp7EbKZcinzRIZu+kajRmDdaFzoTTIRwnxInuA1ko2tp3pmf580tGBm25+ZOGf0Q045Y9RyHFiIOuOUM0qtx8GVKDJC1Ri5ozojlDN16G+/1l/4JFSBCRucAqODU2B8cCqMUAXGBqe42M6p5I7H69Kqffxi+Y9GX50Hllcu+oGKAAAAAElFTkSuQmCC" width="20" height="20" alt="close sidebar" on="tap:sidebar.close" role="button" tabindex="0"></amp-img>
+    <amp-img class="profile-img" layout="responsive" width="1" height="1" src="https://i.imgur.com/5fTrd3D.png"></amp-img>
+    <p>hi. i'm an aspiring web designer currently working on open source projects to learn more about coding.</p>
+    <p>this is where i keep my some of my more organized thoughts.</p>
+</amp-sidebar>
+<section class="blog-section">
+    <article class="blog-article">
+        <div class="full">
+            <h2>react without JSX &amp; friends</h2>
+        </div>
+    </article>
+</section>
+</body>
+</html>
